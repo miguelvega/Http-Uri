@@ -118,3 +118,4 @@ Con lo cual tendriamos lo siguiente en la terminal al iniciar el falso servidor
 ![Captura de pantalla de 2023-09-25 03-09-24](https://github.com/miguelvega/CC3S2/assets/124398378/86937fd0-2bf2-4015-8c7e-128ffcb3c207)
 
 Notamos que el servidor falso està escuchando y al cerrar la ventana en el browser cortamos la conexión.
+
