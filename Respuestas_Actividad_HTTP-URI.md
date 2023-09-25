@@ -107,6 +107,7 @@ Lo abrimos en el navegador
 ![Captura de pantalla de 2023-09-25 02-00-10](https://github.com/miguelvega/CC3S2/assets/124398378/36d58143-97c4-4259-af42-762c2c548b2a)
 
 
+
 ### Pregunta: Cuando se envía un formulario HTML, se genera una solicitud HTTP POST desde el navegador. Para llegar a tu servidor falso, ¿con qué URL deberías reemplazar Url-servidor-falso en el archivo anterior?
 
 Para llegar al servidor falso de debe cambiar dentro del archivo formulario.html el valor del campo action a `http://localhost:8081/` 
