@@ -94,3 +94,5 @@ Como se observa en la imagen de abajo, pusimos un link inexistente y no retorna 
 
 500 (Internal Server Error): El error HTTP 500, indica un error interno en el servidor que impide que la solicitud se complete correctamente.
 
+### Tanto el encabezado 4xx como el 5xx indican condiciones de error. ¿Cuál es la principal diferencia entre 4xx y 5xx?.
+Los errores del tipo 4xx indican que el error se origina en el cliente, es decir, debido a un problema en la solicitud misma como por ejemplo, poner una url inexistente en la solicitud (votará error 404) en cambio los errores del tipo 5xx son errores del servidor, no del cliente, al momento de procesar la solicitud del cliente. Ocurren a menudo debido a problemas internos del servidor, como un fallo en una base de datos, una sobrecarga del servidor o una configuración incorrecta.
