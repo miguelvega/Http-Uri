@@ -106,6 +106,13 @@ Se creo formulario.html
 Lo abrimos en el navegador
 ![Captura de pantalla de 2023-09-25 02-00-10](https://github.com/miguelvega/CC3S2/assets/124398378/36d58143-97c4-4259-af42-762c2c548b2a)
 
+## HTTP sin estados y cookies
+
+
+
+### Pregunta: Prueba las dos primeras operaciones GET anteriores. El cuerpo de la respuesta para la primera debe ser "Logged in: false" y para la segunda "Login cookie set". ¿Cuáles son las diferencias en los encabezados de respuesta que indican que la segunda operación está configurando una cookie? (Sugerencia: usa curl -v, que mostrará tanto los encabezados de solicitud como los encabezados y el cuerpo de la respuesta, junto con otra información de depuración. curl --help imprimirá una ayuda voluminosa para usar cURL y man curl mostrará la página del manual de Unix para cURL en la mayoría de los sistemas.)
+
+
 
 
 ### Pregunta: Cuando se envía un formulario HTML, se genera una solicitud HTTP POST desde el navegador. Para llegar a tu servidor falso, ¿con qué URL deberías reemplazar Url-servidor-falso en el archivo anterior?
