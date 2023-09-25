@@ -59,3 +59,22 @@ Debido a que servidor falso está aceptando la solicitud desde un puerto LOCAL, 
 Entonces, hemos visto una solicitud HTTP desde el punto de vista del servidor, ahora veamos cómo se ve la respuesta desde el punto de vista del cliente  luego de presionar enter en la shell del servidor.
 
 ![Captura de pantalla de 2023-09-24 21-15-13](https://github.com/miguelvega/CC3S2/assets/124398378/6a7b7127-49d0-4e46-aacb-3ca0199d3d43)
+
+
+Luego, al colocar `curl -i 'http://randomword.saasbook.info/'`se obtiene lo siguiente :
+![Captura de pantalla de 2023-09-24 23-41-22](https://github.com/miguelvega/CC3S2/assets/124398378/7c11f03a-543d-4ea2-badf-25e1effd5b95)
+
+### Pregunta: Según los encabezados del servidor, ¿cuál es el código de respuesta HTTP del servidor que indica el estado de la solicitud del cliente y qué versión del protocolo HTTP utilizó el servidor para responder al cliente?
+El código de respuesta es de 200 y el "OK" indica que la solicitud HTTP se completó correctamente y que el servidor ha entregado el recurso solicitado con éxito. La version de HTTP es la 1.1.
+
+### Pregunta: Cualquier solicitud web determinada puede devolver una página HTML, una imagen u otros tipos de entidades. ¿Hay algo en los encabezados que crea que le dice al cliente cómo interpretar el resultado?.
+
+Si, en la imagen anterior nos muestra la informacion que proporciona el encabezado para que el cliente interprete el resultado, por ejemplo, `Content-Type: text/html;charset=utf-8` indica el tipo de contenido que se está enviando como respuesta. En este caso, el contenido es de tipo "text/html", lo que significa que el servidor está enviando una página web HTML. También se especifica la codificación de caracteres UTF-8 utilizada para interpretar el contenido. 
+
+## ¿Qué sucede cuando falla un HTTP request?
+
+### Pregunta: ¿Cuál sería el código de respuesta del servidor si intentaras buscar una URL inexistente en el sitio generador de palabras aleatorias? Pruéba esto utilizando el procedimiento anterior.
+
+Como se observa en la imagen de abajo, pusimos un link inexistente y no retorna un cuerpo html en la respuesta y en la primera linea del encabezado, devuelde el numero 404, este número es el código de estado HTTP que se devuelve en la respuesta. El código de estado "404" se conoce comúnmente como "Error 404" o "Not Found" (No encontrado). Indica que el recurso solicitado por el cliente no fue encontrado en el servidor.
+
+![Captura de pantalla de 2023-09-25 01-14-03](https://github.com/miguelvega/CC3S2/assets/124398378/3a5dcda6-d2c1-4f4e-b02a-aaedb37404c4)
