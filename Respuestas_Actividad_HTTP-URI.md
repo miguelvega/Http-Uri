@@ -127,8 +127,10 @@ Notamos que el servidor falso està escuchando y al cerrar la ventana en el brow
 
 ### Pregunta: Prueba las dos primeras operaciones GET anteriores. El cuerpo de la respuesta para la primera debe ser "Logged in: false" y para la segunda "Login cookie set". ¿Cuáles son las diferencias en los encabezados de respuesta que indican que la segunda operación está configurando una cookie? (Sugerencia: usa curl -v, que mostrará tanto los encabezados de solicitud como los encabezados y el cuerpo de la respuesta, junto con otra información de depuración. curl --help imprimirá una ayuda voluminosa para usar cURL y man curl mostrará la página del manual de Unix para cURL en la mayoría de los sistemas.)
 
+Primero, entramos a la siguiente pagina web `http://esaas-cookie-demo.herokuapp.com` en el navegador y vemos lo siguiente.
 ![Captura de pantalla de 2023-09-25 12-20-21](https://github.com/miguelvega/Http-Uri/assets/124398378/8a80b29a-f097-4b4c-89b9-5a0a003f9c80)
 
+La diferencia se debe a que al aplicar el comando `curl -v 'http://esaas-cookie-demo.herokuapp.com'` no aparece el campo Set-Cookie en la salida, en cambio al aplicar el comando  `curl -v 'http://esaas-cookie-demo.herokuapp.com/login'`si aparece, como se puede ver en las dos siguientes imagenes.
 ![Captura de pantalla de 2023-09-25 12-19-51](https://github.com/miguelvega/Http-Uri/assets/124398378/e5c53b4d-cb2d-42a8-ab67-cc2a48227b10)
 
 ![Captura de pantalla de 2023-09-25 12-20-07](https://github.com/miguelvega/Http-Uri/assets/124398378/c5c268c0-4606-4017-89d3-d54a5f1973cc)
