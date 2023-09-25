@@ -1,4 +1,4 @@
-# Respuestas de la Actividad HTTP - URI
+https://www.google.com/search?client=ubuntu&hs=pmY&sca_esv=568238426&channel=fs&sxsrf=AM9HkKmI5CSqbRduKPBhxVRfXvzN2nNeng:1695662011115&q=Set-Cookie:+logged+in%3Dtrue;+domain%3Destas-cookie-demo.herokuapp.com;+path%3D/;+HttpOnly&spell=1&sa=X&ved=2ahUKEwihntOeocaBAxWrA7kGHYdiC3AQBSgAegQICBAB# Respuestas de la Actividad HTTP - URI
 Del sitio web generador de palabras aleatorias, podemos ver una imagen que se mantiene estática, mientras que la palabra ubicada debajo de la imagen se renueva tras cargar la página.
 
 <p align="center">
@@ -127,10 +127,11 @@ Notamos que el servidor falso està escuchando y al cerrar la ventana en el brow
 
 ### Pregunta: Prueba las dos primeras operaciones GET anteriores. El cuerpo de la respuesta para la primera debe ser "Logged in: false" y para la segunda "Login cookie set". ¿Cuáles son las diferencias en los encabezados de respuesta que indican que la segunda operación está configurando una cookie? (Sugerencia: usa curl -v, que mostrará tanto los encabezados de solicitud como los encabezados y el cuerpo de la respuesta, junto con otra información de depuración. curl --help imprimirá una ayuda voluminosa para usar cURL y man curl mostrará la página del manual de Unix para cURL en la mayoría de los sistemas.)
 
+![Captura de pantalla de 2023-09-25 12-20-21](https://github.com/miguelvega/Http-Uri/assets/124398378/8a80b29a-f097-4b4c-89b9-5a0a003f9c80)
 
-![Captura de pantalla de 2023-09-25 11-52-10](https://github.com/miguelvega/Http-Uri/assets/124398378/c319d09e-bb63-49c5-b9c7-7fce070343ea)
+![Captura de pantalla de 2023-09-25 12-19-51](https://github.com/miguelvega/Http-Uri/assets/124398378/e5c53b4d-cb2d-42a8-ab67-cc2a48227b10)
 
-![Captura de pantalla de 2023-09-25 11-54-45](https://github.com/miguelvega/Http-Uri/assets/124398378/76f6c13c-71c8-4d51-ac19-f2368d7add33)
+![Captura de pantalla de 2023-09-25 12-20-07](https://github.com/miguelvega/Http-Uri/assets/124398378/c5c268c0-4606-4017-89d3-d54a5f1973cc)
 
 
 
