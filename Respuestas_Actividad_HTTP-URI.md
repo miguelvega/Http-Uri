@@ -1,4 +1,4 @@
-https://www.google.com/search?client=ubuntu&hs=pmY&sca_esv=568238426&channel=fs&sxsrf=AM9HkKmI5CSqbRduKPBhxVRfXvzN2nNeng:1695662011115&q=Set-Cookie:+logged+in%3Dtrue;+domain%3Destas-cookie-demo.herokuapp.com;+path%3D/;+HttpOnly&spell=1&sa=X&ved=2ahUKEwihntOeocaBAxWrA7kGHYdiC3AQBSgAegQICBAB# Respuestas de la Actividad HTTP - URI
+# Respuestas de la Actividad HTTP - URI
 Del sitio web generador de palabras aleatorias, podemos ver una imagen que se mantiene estática, mientras que la palabra ubicada debajo de la imagen se renueva tras cargar la página.
 
 <p align="center">
