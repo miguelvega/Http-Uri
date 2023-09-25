@@ -78,3 +78,19 @@ Si, en la imagen anterior nos muestra la informacion que proporciona el encabeza
 Como se observa en la imagen de abajo, pusimos un link inexistente y no retorna un cuerpo html en la respuesta y en la primera linea del encabezado, devuelde el numero 404, este número es el código de estado HTTP que se devuelve en la respuesta. El código de estado "404" se conoce comúnmente como "Error 404" o "Not Found" (No encontrado). Indica que el recurso solicitado por el cliente no fue encontrado en el servidor.
 
 ![Captura de pantalla de 2023-09-25 01-14-03](https://github.com/miguelvega/CC3S2/assets/124398378/3a5dcda6-d2c1-4f4e-b02a-aaedb37404c4)
+
+
+### ¿Qué otros códigos de error HTTP existen? Utiliza Wikipedia u otro recurso para conocer los significados de algunos de los más comunes: 200, 301, 302, 400, 404, 500. Ten en cuenta que estas son familias de estados: todos los estados 2xx significan funcionó, todos los 3xx son redireccionar etc.
+
+200 (OK): Indica que la solicitud fue realizada con exito y si se encontró la información solicitada​
+
+301 (Moved Permanently): indica que el host si ha sido capaz de comunicarse con el servidor pero que el recurso solicitado ha sido movido a otra dirección permanentemente.
+
+302 (Found): se produce cuando el recurso solicitado ha sido trasladado temporalmente a una nueva ubicación.
+
+400 (Bad Request): El error 400 solicitud incorrecta ocurre cuando el servidor no procesará la solicitud, porque no puede, o no debe, debido a algo que es percibido como un error del cliente (ej: solicitud malformada, sintaxis errónea, etc). La solicitud contiene sintaxis errónea y no debería repetirse.
+
+404 (Not Found): Este error indica que el recurso solicitado no se encuentra en el servidor y por lo tanto no ha sido encontrada.​
+
+500 (Internal Server Error): El error HTTP 500, indica un error interno en el servidor que impide que la solicitud se complete correctamente.
+
