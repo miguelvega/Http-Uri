@@ -125,11 +125,12 @@ Notamos que el servidor falso està escuchando y al cerrar la ventana en el brow
 
 
 
-
 ### Pregunta: Prueba las dos primeras operaciones GET anteriores. El cuerpo de la respuesta para la primera debe ser "Logged in: false" y para la segunda "Login cookie set". ¿Cuáles son las diferencias en los encabezados de respuesta que indican que la segunda operación está configurando una cookie? (Sugerencia: usa curl -v, que mostrará tanto los encabezados de solicitud como los encabezados y el cuerpo de la respuesta, junto con otra información de depuración. curl --help imprimirá una ayuda voluminosa para usar cURL y man curl mostrará la página del manual de Unix para cURL en la mayoría de los sistemas.)
 
 
+![Captura de pantalla de 2023-09-25 11-52-10](https://github.com/miguelvega/Http-Uri/assets/124398378/c319d09e-bb63-49c5-b9c7-7fce070343ea)
 
+![Captura de pantalla de 2023-09-25 11-54-45](https://github.com/miguelvega/Http-Uri/assets/124398378/76f6c13c-71c8-4d51-ac19-f2368d7add33)
 
 
 
