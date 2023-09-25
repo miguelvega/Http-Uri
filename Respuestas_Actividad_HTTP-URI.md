@@ -96,3 +96,25 @@ Como se observa en la imagen de abajo, pusimos un link inexistente y no retorna 
 
 ### Tanto el encabezado 4xx como el 5xx indican condiciones de error. ¿Cuál es la principal diferencia entre 4xx y 5xx?.
 Los errores del tipo 4xx indican que el error se origina en el cliente, es decir, debido a un problema en la solicitud misma como por ejemplo, poner una url inexistente en la solicitud (votará error 404) en cambio los errores del tipo 5xx son errores del servidor, no del cliente, al momento de procesar la solicitud del cliente. Ocurren a menudo debido a problemas internos del servidor, como un fallo en una base de datos, una sobrecarga del servidor o una configuración incorrecta.
+
+## ¿Qué es un cuerpo de Request?
+
+Se creo formulario.html
+
+![Captura de pantalla de 2023-09-25 01-59-25](https://github.com/miguelvega/CC3S2/assets/124398378/e0d3dcf8-9e30-48b6-988f-ed7e1c6a417b)
+
+Lo abrimos en el navegador
+![Captura de pantalla de 2023-09-25 02-00-10](https://github.com/miguelvega/CC3S2/assets/124398378/36d58143-97c4-4259-af42-762c2c548b2a)
+
+
+### Pregunta: Cuando se envía un formulario HTML, se genera una solicitud HTTP POST desde el navegador. Para llegar a tu servidor falso, ¿con qué URL deberías reemplazar Url-servidor-falso en el archivo anterior?
+
+Para llegar al servidor falso de debe cambiar dentro del archivo formulario.html el valor del campo action a `http://localhost:8081/` 
+, luego abrimos el archivos en el navegador, colocamos nuestras credenciales y lo guardamos
+
+![Captura de pantalla de 2023-09-25 03-09-14](https://github.com/miguelvega/CC3S2/assets/124398378/80764851-f64e-4389-a3b9-774aa07b7dbe)
+
+Con lo cual tendriamos lo siguiente en la terminal al iniciar el falso servidor
+![Captura de pantalla de 2023-09-25 03-09-24](https://github.com/miguelvega/CC3S2/assets/124398378/86937fd0-2bf2-4015-8c7e-128ffcb3c207)
+
+Notamos que el servidor falso està escuchando y al cerrar la ventana en el browser cortamos la conexión.
