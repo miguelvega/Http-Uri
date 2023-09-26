@@ -172,7 +172,7 @@ Editamos el archivo `formulario.html` para  enviar el formulario mediante GET
 Notamos lo siguiente en el lado del servidor
 ![Captura de pantalla de 2023-09-26 03-19-23](https://github.com/miguelvega/Http-Uri/assets/124398378/331d5d8b-1d8b-4a47-a8f6-399a3bf93695)
 
-Como se puede apreciar en la imagen anterior, si se puede cambiar el atributo method en el formulario de post a get. Cuando utilizas el método GET, los datos del formulario se incluyen en la URL como parámetros de consulta. Esto significa que los datos del formulario se transmiten de manera diferente y pueden ser visibles en la URL.
+Como se puede apreciar en la imagen anterior, si se puede cambiar el atributo method en el formulario de post a get. Cuando utilizas el método GET, los datos del formulario se incluyen en la URL como parámetros de consulta. Esto significa que los datos del formulario se transmiten de manera diferente y pueden ser visibles en la URL. <br>
 La diferencia se da en la transmision de datos, pues en una solicitud GET, los datos se transmiten como parte de la URL en la cadena de consulta, en cambio una solicitud POST, los datos se transmiten en el cuerpo de la solicitud HTTP, ademas es más seguro para el envío de datos sensibles, ya que los datos no son visibles en la URL y, por lo tanto, no son tan susceptibles de ser interceptados.
 
 
