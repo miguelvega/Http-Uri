@@ -119,6 +119,14 @@ Con lo cual tendriamos lo siguiente en la terminal al iniciar el falso servidor
 
 Notamos que el servidor falso està escuchando y al cerrar la ventana en el browser cortamos la conexión.
 
+### Pregunta:¿Cómo se presenta al servidor la información que ingresó en el formulario? ¿Qué tareas necesitaría realizar un framework SaaS como Sinatra o Rails para presentar esta información en un formato conveniente a una aplicación SaaS escrita, por ejemplo, en Ruby?
+
+Se envía el formulario al servidor utilizando el método "post" y la acción `http://localhost:8081/`, con lo cual la información ingresada se envía al servidor en el cuerpo de la solicitud HTTP como datos codificados. Los datos del formulario se codifican en el cuerpo de la solicitud de acuerdo con el tipo de codificación que se especifica en el encabezado de la solicitud.<br>
+Ahora bien, las tareas generales que un framework SaaS como Sinatra o Rails tendría que realizar para presentar esta información en una aplicación SaaS podrian
+ser las siguientes.
+Recibir una solicitud, segùn la direcciòn especificada, por ejemplo, en este caso el servidor recibe la solicitud HTTP POST en la dirección `http://localhost:8081/`.
+
+
 
 ## HTTP sin estados y cookies
 
