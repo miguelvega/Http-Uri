@@ -166,7 +166,10 @@ Notamos lo siguiente en el lado del servidor
 Podemos tener mas de un botón Submit en un formulario HTML. Para distinguir cuál se hizo clic, puedes usar el atributo name en los botones. En nuestro caso, tenemos dos botones con name="login" y name="register" y verificar en el lado del servidor cuál de ellos se incluyó en la solicitud para determinar la acción a realizar, como se puede apreciar en la imagen anterior `correo=miguelon%40gmail.com&contrasenia=1928&secret_info=secret_value&register=Register` se hizo clic en el boton register.
 
 #### ¿Se puede enviar el formulario mediante GET en lugar de POST? En caso afirmativo, ¿cuál es la diferencia en cómo el servidor ve esas solicitudes?
+
+
 #### ¿Qué otros verbos HTTP son posibles en la ruta de envío del formulario? ¿Puedes hacer que el navegador web genere una ruta que utilice PUT, PATCH o DELETE?.
+Normalmente, los navegadores web solo admiten los verbos HTTP GET y POST al enviar formularios. Estos verbos corresponden a las operaciones de recuperación y envío de datos, respectivamente. Para utilizar los verbos HTTP PUT, PATCH o DELETE, generalmente necesitarías utilizar JavaScript o algún otro enfoque más avanzado, ya que los navegadores no generan solicitudes directas con estos verbos al enviar formularios HTML de manera estándar
 
 
 ## HTTP sin estados y cookies
