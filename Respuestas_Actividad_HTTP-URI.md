@@ -153,9 +153,18 @@ Con lo cual el servidor falso recibe los datos de la siguiente manera.
 
 ![Captura de pantalla de 2023-09-26 02-17-03](https://github.com/miguelvega/Http-Uri/assets/124398378/9b61ee8f-ce68-4381-a764-af55157e8152)
 
-EL efecto de cambiar el nombre de las propiedades del formulario alterará cómo se etiquetan los datos cuando se envían al servidor. Si cambias los nombres de los campos, el servidor recibirá los datos con los nuevos nombres. Esto puede afectar la capacidad del servidor para procesar los datos si se espera que los nombres de los campos coincidan con ciertos nombres en el lado del servidor.
+El efecto de cambiar el nombre de las propiedades del formulario alterará cómo se etiquetan los datos cuando se envían al servidor. Si cambias los nombres de los campos, el servidor recibirá los datos con los nuevos nombres. Esto puede afectar la capacidad del servidor para procesar los datos si se espera que los nombres de los campos coincidan con ciertos nombres en el lado del servidor.
 
 #### ¿Puedes tener más de un botón Submit? Si es así, ¿cómo sabe el servidor en cuál se hizo clic? (Sugerencia: experimenta con los atributos de la etiqueta <submit>).
+
+Agregamos un nuevo botón Submit en el archivo `formulario.html`
+![Captura de pantalla de 2023-09-26 02-34-53](https://github.com/miguelvega/Http-Uri/assets/124398378/42555ab6-ff2b-4da5-b3ec-778f8117186b)
+
+Notamos lo siguiente en el lado del servidor
+![Captura de pantalla de 2023-09-26 02-35-56](https://github.com/miguelvega/Http-Uri/assets/124398378/7d1e16bb-b479-4a25-acb4-f2322df7879e)
+
+Podemos tener mas de un botón Submit en un formulario HTML. Para distinguir cuál se hizo clic, puedes usar el atributo name en los botones. En nuestro caso, tenemos dos botones con name="login" y name="register" y verificar en el lado del servidor cuál de ellos se incluyó en la solicitud para determinar la acción a realizar, como se puede apreciar en la imagen anterior `correo=miguelon%40gmail.com&contrasenia=1928&secret_info=secret_value&register=Register` se hizo clic en el boton register.
+
 #### ¿Se puede enviar el formulario mediante GET en lugar de POST? En caso afirmativo, ¿cuál es la diferencia en cómo el servidor ve esas solicitudes?
 #### ¿Qué otros verbos HTTP son posibles en la ruta de envío del formulario? ¿Puedes hacer que el navegador web genere una ruta que utilice PUT, PATCH o DELETE?.
 
