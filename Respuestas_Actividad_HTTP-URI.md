@@ -33,7 +33,7 @@ Otra diferencia es que al cargarlo nuevamente, la palabra no experimenta cambios
 
 ![Captura de pantalla de 2023-09-24 20-01-17](https://github.com/miguelvega/CC3S2/assets/124398378/4fd67f30-6837-4407-bc00-59c90bf09ddc)!
 
-## Netcat
+## Curl y Netcat
 
 Usamos el comando `nc -l 8081` para escuchar por el puerto 8081 desde nuestro servidor falso.
 
@@ -123,9 +123,41 @@ Notamos que el servidor falso està escuchando y al cerrar la ventana en el brow
 
 Se envía el formulario al servidor utilizando el método "post" y la acción `http://localhost:8081/`, con lo cual la información ingresada se envía al servidor en el cuerpo de la solicitud HTTP como datos codificados. Los datos del formulario se codifican en el cuerpo de la solicitud de acuerdo con el tipo de codificación que se especifica en el encabezado de la solicitud.<br>
 Ahora bien, las tareas generales que un framework SaaS como Sinatra o Rails tendría que realizar para presentar esta información en una aplicación SaaS podrian
-ser las siguientes.
-Recibir una solicitud, segùn la direcciòn especificada, por ejemplo, en este caso el servidor recibe la solicitud HTTP POST en la dirección `http://localhost:8081/`.
+ser las siguientes.<br>
+- Recibir la Solicitud: El servidor debe recibir la solicitud HTTP POST en la dirección especificada, que en este caso es `http://localhost:8081/`.
+- Analizar la Solicitud: El framework debe examinar la solicitud entrante y extraer la información del formulario codificada en su cuerpo, que abarca los valores correspondientes a "email", "password" y "secret_info".
+- Validación y Procesamiento: El framework debe realizar la validación de los datos según las reglas de la aplicación, como verificar si se proporcionó una dirección de correo electrónico válida, verificar la contraseña, etc.
+- Acceso a la Base de Datos: Si la aplicación requiere acceso a una base de datos para autenticar al usuario, el framework puede interactuar con la base de datos para verificar las credenciales del usuario.
+- Ejecución de Lógica de Negocio: Dependiendo de la lógica de negocio de la aplicación, el framework puede realizar diversas acciones, como autenticar al usuario, redirigirlo a páginas específicas, mostrar mensajes de error, etc.
+- Generar una Respuesta: En última instancia, el framework debe generar una respuesta HTTP, que generalmente incluirá una página HTML o una redirección a otra página, dependiendo del resultado de la autenticación.
 
+Ruby on Rails ofrece estructuras y pautas particulares diseñadas para la gestión de formularios y el procesamiento de datos provenientes de formularios HTM.<br>
+Rails utiliza controladores y modelos para gestionar la lógica de negocio y acceder a la base de datos de manera eficiente. Sin embargo, la implementación exacta puede variar según la aplicación y los requisitos específicos de la misma. 
+
+<br>
+
+### Segùn el experimento anterior, repita varias veces para responder las siguientes preguntas observando las diferencias en el resultado impreso por nc:
+
+#### ¿Cuál es el efecto de agregar parámetros URI adicionales como parte de la ruta POST?
+Al agregar parámetros URI adicionales como parte de la ruta POST no tendran ningún efecto, pues simplementes se considerarán parte de la URL, pero no tendrán impacto en los datos del formulario que se envían al servidor, ya que cuando se envía un formulario HTML utilizando POST, los datos del formulario se envían en el cuerpo de la solicitud HTTP.Por tal motivo, los parámetros en la URI generalmente se utilizan en solicitudes GET para transmitir información en la URL.
+
+#### ¿Cuál es el efecto de cambiar las propiedades de nombre de los campos del formulario?
+
+Como se puede apreciar en el formulario visto anetorio, se ha cambiado los nombres de los campos de la siguiente manera:
+- name="correo" en lugar de name="email"
+- name="contrasenia" en lugar de name="password"
+
+![Captura de pantalla de 2023-09-26 02-15-13](https://github.com/miguelvega/Http-Uri/assets/124398378/5f06d77b-fca8-4118-81c2-653cf9425e59)
+
+Con lo cual el servidor falso recibe los datos de la siguiente manera.
+
+![Captura de pantalla de 2023-09-26 02-17-03](https://github.com/miguelvega/Http-Uri/assets/124398378/9b61ee8f-ce68-4381-a764-af55157e8152)
+
+EL efecto de cambiar el nombre de las propiedades del formulario alterará cómo se etiquetan los datos cuando se envían al servidor. Si cambias los nombres de los campos, el servidor recibirá los datos con los nuevos nombres. Esto puede afectar la capacidad del servidor para procesar los datos si se espera que los nombres de los campos coincidan con ciertos nombres en el lado del servidor.
+
+#### ¿Puedes tener más de un botón Submit? Si es así, ¿cómo sabe el servidor en cuál se hizo clic? (Sugerencia: experimenta con los atributos de la etiqueta <submit>).
+#### ¿Se puede enviar el formulario mediante GET en lugar de POST? En caso afirmativo, ¿cuál es la diferencia en cómo el servidor ve esas solicitudes?
+#### ¿Qué otros verbos HTTP son posibles en la ruta de envío del formulario? ¿Puedes hacer que el navegador web genere una ruta que utilice PUT, PATCH o DELETE?.
 
 
 ## HTTP sin estados y cookies
